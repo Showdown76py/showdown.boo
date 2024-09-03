@@ -153,14 +153,29 @@ body {
     max-width: 32rem;
 }
 
-.fade-in {
+/* .fade-in {
     opacity: 0;
     animation: fadeInAnimation 2s forwards;
-}
+} */
 
-@keyframes fadeInAnimation {
+/* @keyframes fadeInAnimation {
     to {
         opacity: 1;
+    }
+} */
+
+.fade-in {
+    animation: fade-in 1s ease;
+}
+  
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.98, 0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
     }
 }
 
@@ -180,12 +195,28 @@ body {
         padding: 0;
     }
 
+    .time {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
     .name-box {
         font-size: 50%;
         width: 100%;
         text-align: center;
         border-radius: 0;
         padding: 0;
+    }
+
+    .info {
+        padding: 0 0.4rem;
+        height: 100%;
+        /* vertical center */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
     }
 
     .paragraph {

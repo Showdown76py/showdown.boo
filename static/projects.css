@@ -50,7 +50,7 @@ h1 {
 
 .project-box {
     display: flex;
-    width: 95%;
+    width: 100%;
     flex-direction: column;
     gap: 2rem;
 }
