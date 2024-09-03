@@ -130,4 +130,8 @@ footer {
         max-height: 10rem;
         object-fit: cover;
     }
+
+    #back {
+        display: none;
+    }
 }
