@@ -8,13 +8,19 @@
 :root {
     --white: #f4f4f4;
     --black: #0b0b0b;
-    --primary: #DCBBFF;
+    --primary: #d8acff;
 }
 
 html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
+}
+
+* {
+    -webkit-font-smoothing: antialisased;
+    font-synthesis: none !important;
+
 }
 
 body {
@@ -67,6 +73,8 @@ body {
 .media {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 2rem;
     padding: 1.5rem 1rem;
     color: var(--white);
@@ -74,6 +82,8 @@ body {
 
 .media > a {
     color: inherit;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .presentation-box {
@@ -108,7 +118,7 @@ body {
 
 .fade-in {
     opacity: 0;
-    animation: fadeInAnimation 1s forwards;
+    animation: fadeInAnimation 2s forwards;
 }
 
 @keyframes fadeInAnimation {
@@ -149,6 +159,10 @@ body {
         width: 100%;
         justify-content: center;
         align-items: center;
+    }
+
+    .text-main {
+        font-weight: 750;
     }
 
     .media {

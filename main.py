@@ -7,5 +7,5 @@ app = flask.Flask(__name__, static_folder='static', static_url_path='/static')
 def index():
     return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=os.environ.get("PORT"), threaded=True)
+if __name__ == '__main__':                                                                                                                                                                                          
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT")), debug=1, threaded=True)
