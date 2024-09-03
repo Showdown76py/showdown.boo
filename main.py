@@ -1,6 +1,7 @@
-import flask, os
+import flask, os, dotenv
 from flask import request, jsonify, render_template
 
+dotenv.load_dotenv()
 app = flask.Flask(__name__, static_folder='static', static_url_path='/static')
 
 @app.route('/')
