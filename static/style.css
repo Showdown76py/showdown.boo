@@ -80,6 +80,7 @@ body {
     column-gap: 1.6rem;
     row-gap: 0;
     padding: 1.5rem 1rem;
+    padding-top: 0;
     color: var(--white);
 }
 
@@ -153,6 +154,26 @@ body {
     max-width: 32rem;
 }
 
+.see-projects {
+    font-size: 1.6em;
+    font-weight: 500;
+    padding: 0 1rem; 
+}
+
+.see-projects > p {
+    margin: 1.4rem 0 1rem;
+}
+
+.see-projects > p > a {
+    color: #e0bdff;
+    text-decoration: none;
+}
+
+.see-projects > p > a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
 /* .fade-in {
     opacity: 0;
     animation: fadeInAnimation 2s forwards;
@@ -211,7 +232,7 @@ body {
 
     .info {
         padding: 0 0.4rem;
-        height: 100%;
+        height: 75%; /* FIXME */
         /* vertical center */
         display: flex;
         flex-direction: column;
@@ -225,6 +246,7 @@ body {
 
     .presentation-box {
         width: 100%;
+        height: 100%;
         justify-content: center;
         align-items: center;
     }
