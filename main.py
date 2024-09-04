@@ -6,16 +6,17 @@ app = flask.Flask(__name__, static_folder='static', static_url_path='/static')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    theme = request.cookies.get('theme')
+    return render_template('index.html', theme=theme)
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
+    theme = request.cookies.get('theme')
+    return render_template('projects.html', theme=theme)
 
 @app.route('/robots.txt')
 def robots():
     return app.send_static_file('robots.txt')
 
 if __name__ == '__main__':         
-    print('OK')                                                                                                                                                                                 
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT")), debug=1, threaded=True)

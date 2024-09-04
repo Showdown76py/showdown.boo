@@ -3,6 +3,14 @@ html, body {
     overflow: auto;
 }
 
+.light-theme {
+    --project: #f9d6f9;
+}
+
+.dark-theme {
+    --project: #302530;
+}
+
 .root-projects {
     display: flex;
     flex-direction: column;
@@ -38,7 +46,7 @@ a.nke:hover {
 
 .presentation-box > a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
     font-size: 1.5rem;
 }
 
@@ -66,7 +74,7 @@ h1 {
 
 .project {
     padding: 2rem;
-    background-color: #302530;
+    background-color: var(--project);
     border-radius: 18px;
     gap: 2rem;
     display: flex;
@@ -83,7 +91,7 @@ h1 {
 .project-title {
     font-size: 1.5rem;
     font-weight: 750;
-    color: #f0f0f0;
+    color: var(--white);
     padding: 0;
 }
 
@@ -101,7 +109,7 @@ footer {
     font-weight: 600;
     font-size: 1.2rem;   
     padding-top: 0.8em;
-    color: #ffa4ff;
+    color: var(--primary);
 }
 
 .project-img {
@@ -113,7 +121,11 @@ footer {
     border-radius: 18px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1000px) {
+    body {
+        padding: 0;
+    }
+
     .name-box {
         font-size: 50%;
         width: 100%;
@@ -125,6 +137,13 @@ footer {
 
     .project {
         flex-direction: column;
+    }
+
+    .presentation-box {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .project-img {
