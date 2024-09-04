@@ -12,5 +12,6 @@ def index():
 def projects():
     return render_template('projects.html')
 
-if __name__ == '__main__':                                                                                                                                                                                          
+if __name__ == '__main__':         
+    print('Ready')                                                                                                                                                                                 
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT")), debug=1, threaded=True)
