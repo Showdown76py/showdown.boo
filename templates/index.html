@@ -14,52 +14,44 @@
     <meta property="og:image" content="/static/image.png">
     <meta property="og:url" content="https://showdown.boo">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#d8acff">
+    <meta name="theme-color" content="#c9a2ff">
 </head>
 <body class="{{ theme if theme else "dark-theme" }}">
-    <div class="theme-button pc">
+    <div class="ambient" aria-hidden="true"></div>
+    <button class="theme-button" aria-label="Toggle theme">
         <i id="theme-toggle-btn" class="fa-solid fa-moon"></i>
-    </div>
+    </button>
     <main class="root-index fade-in">
         <section class="presentation-box">
-            <div class="name-box">
-                <p style="white-space:nowrap;">
-                    <span class="text-main">showdown</span>
-                    <span class="text-sub">.boo</span>
-                </p>
-            </div>
+            <h1 class="wordmark">
+                <span class="text-main">showdown</span><span class="text-sub">.boo</span>
+            </h1>
             <div class="time">
                 <i class="fa-solid fa-globe"></i>
                 <a id="time">--:--</a>
-                <a style="white-space:nowrap;">(Europe/Paris)</a>
-                <a>·</a>
-                <a>@showdown76</a>
-
+                <span>(Europe/Paris)</span>
+                <span>·</span>
+                <span>@showdown76</span>
             </div>
-            <section class="info">
-                <p class="paragraph">
-                    french student in computer science, I like to code—mainly in Python. sometimes, I play some video games (Minecraft, CS2, ..). I'm also interested in cybersecurity and AI. feel free to contact me on Discord or send me an email ↓
-                </p>
-                <div class="see-projects">
-                    <p><a href="/projects">See Projects →</a></p>
-                </div>
-                <div class="media">
-                    <a href="mailto:me@showdown.boo"><i class="fa-solid fa-envelope fa-xl hover"></i></a>
-                    <a href="https://discord.com/users/901809620165722112"><i class="fa-brands fa-discord fa-xl hover"></i></a>
-                    <a href="https://instagram.com/showw76"><i class="fa-brands fa-instagram fa-xl hover"></i></a>
-                    <a href="https://x.com/Showdownn76"><i class="fa-brands fa-x-twitter fa-xl hover"></i></a>
-                    <a href="https://github.com/Showdown76py"><i class="fa-brands fa-github fa-xl hover"></i></a>
-                    <a href="https://steamcommunity.com/profiles/76561198362780831/"><i class="fa-brands fa-steam fa-xl hover"></i></a>
-                    <a href="https://git.tarkacore.dev/showdown"><i class="fa-brands fa-git-alt fa-xl hover"></i></a>
-                </div>
-            </section>
+            <p class="paragraph">
+                french student in computer science, I like to code—mainly in <strong>Python</strong>. sometimes, I play some video games (Minecraft, CS2, ..). I'm also interested in <strong>cybersecurity</strong> and <strong>AI</strong>. feel free to contact me on Discord or send me an email ↓
+            </p>
+            <div class="see-projects">
+                <a class="btn-primary" href="/projects">See projects <span class="arrow">→</span></a>
+            </div>
+            <div class="media">
+                <a href="mailto:me@showdown.boo" aria-label="Email"><i class="fa-solid fa-envelope fa-xl hover"></i></a>
+                <a href="https://discord.com/users/901809620165722112" aria-label="Discord"><i class="fa-brands fa-discord fa-xl hover"></i></a>
+                <a href="https://instagram.com/showw76" aria-label="Instagram"><i class="fa-brands fa-instagram fa-xl hover"></i></a>
+                <a href="https://x.com/Showdownn76" aria-label="X"><i class="fa-brands fa-x-twitter fa-xl hover"></i></a>
+                <a href="https://github.com/Showdown76py" aria-label="GitHub"><i class="fa-brands fa-github fa-xl hover"></i></a>
+                <a href="https://steamcommunity.com/profiles/76561198362780831/" aria-label="Steam"><i class="fa-brands fa-steam fa-xl hover"></i></a>
+                <a href="https://git.tarkacore.dev/showdown" aria-label="Git"><i class="fa-brands fa-git-alt fa-xl hover"></i></a>
+            </div>
         </section>
         <aside class="picture-box">
-            <img id="profile-picture" src="/static/image.png" alt="Profile Picture" />
+            <img id="profile-picture" src="/static/image.png" alt="Profile picture" />
         </aside>
-        <div class="theme-button theme-button-m mobile">
-            <i id="theme-toggle-btn" class="fa-solid fa-moon"></i>
-        </div>
     </main>
 </body>
 </html>

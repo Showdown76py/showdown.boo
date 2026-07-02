@@ -1,12 +1,14 @@
-const button = document.getElementById('theme-toggle-btn');
-const buttondiv = document.querySelectorAll('.theme-button');
-
+const toggleButtons = document.querySelectorAll('.theme-button');
 
 function applyTheme(theme) {
-    var currentTheme = document.body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
-    document.body.classList.remove(currentTheme);
+    document.body.classList.remove('light-theme', 'dark-theme');
     document.body.classList.add(theme);
-    document.cookie = "theme=" + theme;
+    document.cookie = "theme=" + theme + "; path=/; max-age=31536000";
+
+    document.querySelectorAll('.theme-button i').forEach(icon => {
+        icon.classList.toggle('fa-moon', theme === 'dark-theme');
+        icon.classList.toggle('fa-sun', theme === 'light-theme');
+    });
 }
 
 function getSystemTheme() {
@@ -15,22 +17,12 @@ function getSystemTheme() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const savedTheme = document.cookie.replace(/(?:(?:^|.*;\s*)theme\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-    const systemTheme = getSystemTheme();
-
-    if (savedTheme) {
-        applyTheme(savedTheme);
-    } else {
-        applyTheme(systemTheme);
-    }
+    applyTheme(savedTheme || getSystemTheme());
 });
 
-
-for (let i = 0; i < buttondiv.length; i++) {
-    console.log('Button:', buttondiv[i]);
-    buttondiv[i].addEventListener('click', () => {
+toggleButtons.forEach(button => {
+    button.addEventListener('click', () => {
         const currentTheme = document.body.classList.contains('light-theme') ? 'light-theme' : 'dark-theme';
-        const newTheme = currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
-        applyTheme(newTheme);
-        document.cookie = "theme=" + newTheme;
+        applyTheme(currentTheme === 'light-theme' ? 'dark-theme' : 'light-theme');
     });
-}
+});

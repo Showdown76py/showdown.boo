@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/90581a28ff.js" crossorigin="anonymous"></script>
+    <script src="/static/js/theme.js" defer></script>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/projects.css">
     <title>showdown.boo - Projects</title>
@@ -13,73 +14,74 @@
     <meta property="og:image" content="/static/image.png">
     <meta property="og:url" content="https://showdown.boo">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#d8acff">
+    <meta name="theme-color" content="#c9a2ff">
 </head>
 <body class="{{ theme if theme else "dark-theme" }}">
-    <div class="theme-button">
+    <div class="ambient" aria-hidden="true"></div>
+    <button class="theme-button" aria-label="Toggle theme">
         <i id="theme-toggle-btn" class="fa-solid fa-moon"></i>
-    </div>
-    <script src="/static/js/theme.js"></script>
+    </button>
     <main class="root-projects fade-in">
-        <section class="presentation-box">
-            <a id="back" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i></a>
-            <div onclick="window.location.href='/'" class="name-box">
-                <p style="white-space:nowrap;">
-                    <span class="text-main">showdown</span>
-                    <span class="text-sub">.boo</span>
-                </p>
-            </div>
+        <header class="top-bar">
+            <a id="back" href="/" aria-label="Back to home"><i class="fa-solid fa-arrow-left"></i></a>
+            <a class="wordmark-small" href="/">
+                <span class="text-main">showdown</span><span class="text-sub">.boo</span>
+            </a>
+        </header>
+
+        <section>
+            <h1 class="page-title">Projects</h1>
+            <p class="page-intro">Here's what I've been working on. Most of it is Discord bots and small tools, usually written in Python.</p>
         </section>
-        <section class="projects">
-            <h1>Projects</h1>
-            <h2>Currently maintained</h2>
-            <div class="project-box">
-                <div class="project hover-s" id="copeai">
-                    <img class="project-img" src="https://cdn.discordapp.com/icons/1088231172292751533/66aee19888bd4b7f88ee954286ed0d71.png?size=2048">
-                    <div class="project-details">
-                        <p class="project-title">CopeAI</p>
-                        <p class="project-description">Discord server that allows anyone to use most recent OpenAI models such as GPT-4o for free with low restrictions. Also has its own way to browse the web, independently from OpenAI.</p>
-                        <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://discord.com/invite/6hkfnH9wuH">Join Discord Server →</a></footer>
-                    </div>
+
+        <h2 class="section-label">Currently maintained</h2>
+        <div class="project-box">
+            <div class="project" id="copeai">
+                <img class="project-img" src="https://cdn.discordapp.com/icons/1088231172292751533/66aee19888bd4b7f88ee954286ed0d71.png?size=2048" alt="CopeAI icon">
+                <div class="project-details">
+                    <p class="project-title">CopeAI</p>
+                    <p class="project-description">Discord server that allows anyone to use most recent OpenAI models such as GPT-4o for free with low restrictions. Also has its own way to browse the web, independently from OpenAI.</p>
+                    <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://discord.com/invite/6hkfnH9wuH">Join Discord Server →</a></footer>
                 </div>
-
-                <div class="project hover-s" id="myai">
-                    <img class="project-img" src="https://cdn.discordapp.com/avatars/1167188276013170778/c2c5aaaebddc39d2fb00e0419c1c699d.webp?size=1024">
-                    <div class="project-details">
-                        <p class="project-title">MyAI</p>
-                        <p class="project-description">Just like CopeAI, this allows you to access GPT-4o for free. Inspired from Snapchat's AI chatbot, you can have an infinite conversation with them directly in your DMs.</p>
-                        <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://discord.com/invite/6hkfnH9wuH">Join Discord Server →</a></footer>
-                    </div>
-                </div>
-
-                <div class="project hover-s" id="coreprotect">
-                    <img class="project-img" src="https://cdn.discordapp.com/icons/1442792905793208374/2fa283534cba5badbeca58f721e485fb.webp?size=1024&quality=lossless">
-                    <div class="project-details">
-                        <p class="project-title">CoreProtect 🇫🇷</p>
-                        <p class="project-description">Customizable, complete but simplified Discord bot for communities, deployable on your own private instance. Only available in French.</p>
-                        <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://discord.gg/rDXrm58kQq">Join Discord Server →</a></footer>
-                    </div>
-                </div>
-
-
             </div>
-            <h2>Archived</h2>
-            <div class="project-box">
-                <div class="project hover-s" id="univers-protect">
-                    <div class="project-details">
-                        <p class="project-title">Univers Account Protector for Discord</p>
-                        <p class="project-description">This project would connect on your Discord account and monitor any suspicious spam DMs, then warn you directly by text message.</p>
-                        <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://github.com/Showdown76py/discord-protector/">View GitHub Project →</a></footer>
-                    </div>
+
+            <div class="project" id="myai">
+                <img class="project-img" src="https://cdn.discordapp.com/avatars/1167188276013170778/c2c5aaaebddc39d2fb00e0419c1c699d.webp?size=1024" alt="MyAI icon">
+                <div class="project-details">
+                    <p class="project-title">MyAI</p>
+                    <p class="project-description">Just like CopeAI, this allows you to access GPT-4o for free. Inspired from Snapchat's AI chatbot, you can have an infinite conversation with them directly in your DMs.</p>
+                    <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://discord.com/invite/6hkfnH9wuH">Join Discord Server →</a></footer>
                 </div>
-                <div class="project hover-s" id="teslaoverdiscord">
-                    <div class="project-details">
-                        <p class="project-title">Tesla Over Discord</p>
-                        <p class="project-description">Check charging conditons, temperature and make your Tesla fart through Discord. CAUTION: this is not recommended and risky.</p>
-                        <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://github.com/Showdown76py/tesla-over-discord/">View GitHub Project →</a></footer>
-                    </div>
+            </div>
+
+            <div class="project" id="coreprotect">
+                <img class="project-img" src="https://cdn.discordapp.com/icons/1442792905793208374/2fa283534cba5badbeca58f721e485fb.webp?size=1024&quality=lossless" alt="CoreProtect icon">
+                <div class="project-details">
+                    <p class="project-title">CoreProtect 🇫🇷</p>
+                    <p class="project-description">Customizable, complete but simplified Discord bot for communities, deployable on your own private instance. Only available in French.</p>
+                    <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://discord.gg/rDXrm58kQq">Join Discord Server →</a></footer>
                 </div>
-        </section>
+            </div>
+        </div>
+
+        <h2 class="section-label archived">Archived</h2>
+        <div class="project-box">
+            <div class="project is-archived" id="univers-protect">
+                <div class="project-details">
+                    <p class="project-title">Univers Account Protector for Discord</p>
+                    <p class="project-description">This project would connect on your Discord account and monitor any suspicious spam DMs, then warn you directly by text message.</p>
+                    <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://github.com/Showdown76py/discord-protector/">View GitHub Project →</a></footer>
+                </div>
+            </div>
+
+            <div class="project is-archived" id="teslaoverdiscord">
+                <div class="project-details">
+                    <p class="project-title">Tesla Over Discord</p>
+                    <p class="project-description">Check charging conditons, temperature and make your Tesla fart through Discord. CAUTION: this is not recommended and risky.</p>
+                    <footer><a target="_blank" rel="noopener noreferrer" class="nke" href="https://github.com/Showdown76py/tesla-over-discord/">View GitHub Project →</a></footer>
+                </div>
+            </div>
+        </div>
     </main>
 </body>
 </html>
