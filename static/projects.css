@@ -54,7 +54,6 @@ body {
 }
 
 .wordmark-small .text-sub {
-    animation: none;
     text-shadow: 0 0 18px var(--glow-1);
 }
 

@@ -175,14 +175,7 @@ button:focus-visible,
 
 .text-sub {
     color: var(--accent);
-    display: inline-block;
     text-shadow: 0 0 28px var(--glow-1), 0 0 60px var(--glow-2);
-    animation: boo-float 4.5s ease-in-out infinite alternate;
-}
-
-@keyframes boo-float {
-    from { transform: translateY(0.06em) rotate(-1deg); }
-    to   { transform: translateY(-0.06em) rotate(1.5deg); }
 }
 
 .time {
@@ -285,9 +278,7 @@ button:focus-visible,
 #profile-picture {
     display: block;
     width: min(24rem, 30vw);
-    border-radius: 28px;
-    border: 1px solid var(--border);
-    box-shadow: 0 20px 70px var(--glow-1), 0 4px 24px var(--glow-2);
+    filter: drop-shadow(0 20px 45px var(--glow-1)) drop-shadow(0 4px 16px var(--glow-2));
 }
 
 /* entrance */
@@ -335,7 +326,6 @@ button:focus-visible,
 
     #profile-picture {
         width: 6.5rem;
-        border-radius: 22px;
     }
 
     .paragraph {
